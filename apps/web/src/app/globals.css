@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: oklch(0.9911 0.0018 87.5);
+  --foreground: oklch(0.2103 0.0059 285.9);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2103 0.0059 285.9);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2103 0.0059 285.9);
+
+  --primary: oklch(0.3958 0.1331 269.5);
+  --primary-foreground: oklch(0.9821 0.0038 269.5);
+  --primary-hover: oklch(0.3438 0.1281 269.5);
+
+  --secondary: oklch(0.9606 0.0047 286);
+  --secondary-foreground: oklch(0.2103 0.0059 285.9);
+
+  --muted: oklch(0.9683 0.0044 286);
+  --muted-foreground: oklch(0.4815 0.0111 286);
+
+  --accent: oklch(0.9527 0.0173 269.5);
+  --accent-foreground: oklch(0.3238 0.1181 269.5);
+
+  --destructive: oklch(0.5771 0.2152 27.33);
+  --destructive-foreground: oklch(0.9821 0.0038 27.33);
+
+  --success: oklch(0.5854 0.1385 155.5);
+  --success-foreground: oklch(0.9821 0.0038 155.5);
+
+  --warning: oklch(0.7686 0.1647 70.08);
+  --warning-foreground: oklch(0.2103 0.0059 70.08);
+
+  --border: oklch(0.9137 0.0058 286);
+  --input: oklch(0.9137 0.0058 286);
+  --ring: oklch(0.3958 0.1331 269.5);
+
+  --radius: 0.625rem;
+
+  --shadow-color: 285.9 6% 20%;
+  --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.04);
+  --shadow-sm: 0 1px 3px 0 hsl(var(--shadow-color) / 0.06), 0 1px 2px -1px hsl(var(--shadow-color) / 0.06);
+  --shadow-md: 0 4px 8px -2px hsl(var(--shadow-color) / 0.06), 0 2px 4px -2px hsl(var(--shadow-color) / 0.05);
+  --shadow-lg: 0 12px 24px -6px hsl(var(--shadow-color) / 0.08), 0 4px 8px -4px hsl(var(--shadow-color) / 0.06);
+  --shadow-xl: 0 24px 48px -12px hsl(var(--shadow-color) / 0.14);
+}
+
+.dark {
+  --background: oklch(0.1649 0.0057 285.9);
+  --foreground: oklch(0.9491 0.0034 285.9);
+  --card: oklch(0.2025 0.0063 285.9);
+  --card-foreground: oklch(0.9491 0.0034 285.9);
+  --popover: oklch(0.2103 0.0063 285.9);
+  --popover-foreground: oklch(0.9491 0.0034 285.9);
+
+  --primary: oklch(0.7126 0.1352 269.5);
+  --primary-foreground: oklch(0.1649 0.0057 269.5);
+  --primary-hover: oklch(0.7626 0.1252 269.5);
+
+  --secondary: oklch(0.2603 0.0063 285.9);
+  --secondary-foreground: oklch(0.9491 0.0034 285.9);
+
+  --muted: oklch(0.2401 0.0063 285.9);
+  --muted-foreground: oklch(0.652 0.0104 286);
+
+  --accent: oklch(0.2703 0.0313 269.5);
+  --accent-foreground: oklch(0.8321 0.0781 269.5);
+
+  --destructive: oklch(0.6271 0.2052 27.33);
+  --destructive-foreground: oklch(0.1649 0.0057 27.33);
+
+  --success: oklch(0.6754 0.1485 155.5);
+  --success-foreground: oklch(0.1649 0.0057 155.5);
+
+  --warning: oklch(0.7986 0.1547 70.08);
+  --warning-foreground: oklch(0.1649 0.0057 70.08);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.7126 0.1352 269.5);
+
+  --shadow-color: 0 0% 0%;
+  --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.2);
+  --shadow-sm: 0 1px 3px 0 hsl(var(--shadow-color) / 0.3), 0 1px 2px -1px hsl(var(--shadow-color) / 0.3);
+  --shadow-md: 0 4px 8px -2px hsl(var(--shadow-color) / 0.32), 0 2px 4px -2px hsl(var(--shadow-color) / 0.28);
+  --shadow-lg: 0 12px 24px -6px hsl(var(--shadow-color) / 0.4), 0 4px 8px -4px hsl(var(--shadow-color) / 0.32);
+  --shadow-xl: 0 24px 48px -12px hsl(var(--shadow-color) / 0.55);
+}
+
+@theme inline {
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scale-in: scale-in 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-shimmer: shimmer 1.8s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bg-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--color-muted) 25%,
+      var(--color-secondary) 37%,
+      var(--color-muted) 63%
+    );
+    background-size: 400% 100%;
+  }
+}

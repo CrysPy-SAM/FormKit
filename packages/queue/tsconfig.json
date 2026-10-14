@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "@formkit/typescript-config/node.json"
+    ],
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@formkit/redis",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@formkit/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "formkit",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "dotenv -- turbo dev",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "type": "module",
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0",
+    "pdf-parse": "^2.4.5",
+    "pdfkit": "^0.20.2",
+    "prettier": "^3.9.5",
+    "turbo": "^2.10.4",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@11.5.1",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "@formkit/typescript-config/node.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+  },
+  "include": [
+    "./src",
+    "drizzle.config.ts"
+, "src/env.ts"  ],
+}

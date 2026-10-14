@@ -1,0 +1,15 @@
+{
+  "name": "@formkit/config",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@formkit/typescript-config": "workspace:*",
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  }
+}

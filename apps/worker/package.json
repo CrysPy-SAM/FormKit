@@ -1,0 +1,26 @@
+{
+  "name": "@formkit/worker",
+  "private": true,
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@formkit/typescript-config": "workspace:*",
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@formkit/logger": "workspace:*",
+    "@formkit/queue": "workspace:*",
+    "@formkit/utils": "workspace:*",
+    "bullmq": "^6.0.2",
+    "dotenv": "^17.4.2",
+    "resend": "^6.18.1",
+    "zod": "^4.4.3"
+  }
+}

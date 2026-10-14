@@ -1,0 +1,38 @@
+services:
+  postgresdb:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    container_name: postgresdb
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-formkit}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-formkit}
+      POSTGRES_DB: ${POSTGRES_DB:-formkit}
+    ports:
+      - "5432:5432"
+    volumes:
+      - formkit_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-formkit}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  valkey:
+    image: valkey/valkey:alpine
+    container_name: formkit_valkey
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: >
+      valkey-server --appendonly yes
+    volumes:
+      - valkey_data:/data
+    healthcheck:
+      test: [ "CMD", "valkey-cli", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  formkit_data:
+  valkey_data:

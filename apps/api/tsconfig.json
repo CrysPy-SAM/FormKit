@@ -1,0 +1,22 @@
+{
+  "extends": "@formkit/typescript-config/node.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declarationMap": false,
+    "declaration": false,
+    "sourceMap": false,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+  },
+  "include": [
+    "src",
+    "types"
+  ],
+  "ts-node": {
+    "swc": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@formkit/queue",
+  "private": true,
+  "main": "./src/index.js",
+  "types": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@formkit/typescript-config": "workspace:*",
+    "@types/node": "^26.1.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@formkit/db": "workspace:*",
+    "bullmq": "^6.0.2",
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.1",
+    "zod": "^4.4.3"
+  }
+}

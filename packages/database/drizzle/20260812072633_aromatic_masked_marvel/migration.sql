@@ -1,0 +1,2 @@
+ALTER TABLE "forms" ADD COLUMN "team_id" uuid;--> statement-breakpoint
+ALTER TABLE "forms" ADD CONSTRAINT "forms_team_id_teams_id_fkey" FOREIGN KEY ("team_id") REFERENCES "teams"("id") ON DELETE CASCADE;

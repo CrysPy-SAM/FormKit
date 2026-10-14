@@ -1,0 +1,13 @@
+{
+  "name": "@formkit/types",
+  "type": "module",
+  "private":true,
+  "main": "./src/fastify.ts",
+  "types": "./src/fastify.ts",
+  "dependencies": {
+    "@fastify/cookie": "^11.1.1"
+  },
+  "peerDependencies": {
+    "fastify": "^5.10.0"
+  }
+}

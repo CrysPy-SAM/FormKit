@@ -1,0 +1,6 @@
+{
+    "extends": ["@formkit/typescript-config/node.json"],
+    "include": [
+        "./src"
+    ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "orgs" ADD COLUMN "is_personal" boolean DEFAULT false NOT NULL;
